@@ -31,7 +31,7 @@ public class AsyncTaskTestActivity extends BaseActivity {
             @Override
             public void onClick(View v) {
                 MyAsyncTask myAsyncTask = new MyAsyncTask();
-                myAsyncTask.execute();
+                myAsyncTask.execute(100,10);
             }
         });
 
@@ -44,7 +44,8 @@ public class AsyncTaskTestActivity extends BaseActivity {
      * Result 后台执行任务最终返回的结果，比如String。
      */
     private class MyAsyncTask extends AsyncTask<Integer, Integer, String> {
-
+        int duration = 0;
+        int current = 0;
 
         //在任务执行前进行调用的方法
         @Override
@@ -57,19 +58,28 @@ public class AsyncTaskTestActivity extends BaseActivity {
         @Override
         protected void onProgressUpdate(Integer... values) {
             super.onProgressUpdate(values);
-            for (int i = 10; i <= 100; i += 10) {
-            }
+            progressBar.setProgress(values[0]);
         }
 
         //该方法必须重写，异步操作，不能做UI操作，return的结果将
         @Override
         protected String doInBackground(Integer... params) {
-            return null;
+            for (int i = 0; i <= 100; i++) {
+                publishProgress(i, 5);
+                try {
+                    Thread.sleep(params[0]);
+                } catch (InterruptedException e) {
+                    // TODO Auto-generated catch block
+                    e.printStackTrace();
+                }
+            }
+            return "执行完毕";
         }
 
         //该方法用于做UI操作，相当于handler的作用，如果不需要UI操作可以不实现该方法。
         @Override
         protected void onPostExecute(String s) {
+            textView.setText("异步完成了，可以操作UI了");
             super.onPostExecute(s);
         }
     }
