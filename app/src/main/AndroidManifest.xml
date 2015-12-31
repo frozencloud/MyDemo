@@ -38,10 +38,10 @@
             </intent-filter>
         </service>
 
-        <activity android:name=".activity.ServiceLifecycleActivity_"/>
-
+        <activity android:name=".activity.ServiceLifecycleActivity_" />
         <activity android:name=".activity.HandlerTestActivity" />
-        <activity android:name=".activity.AsyncTaskTestActivity"></activity>
+        <activity android:name=".activity.AsyncTaskTestActivity" />
+        <activity android:name=".activity.AnnotationsBackTestActivity_"/>
     </application>
 
 </manifest>
