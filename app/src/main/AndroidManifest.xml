@@ -39,6 +39,9 @@
         </service>
 
         <activity android:name=".activity.ServiceLifecycleActivity_"/>
+
+        <activity android:name=".activity.HandlerTestActivity" />
+        <activity android:name=".activity.AsyncTaskTestActivity"></activity>
     </application>
 
 </manifest>

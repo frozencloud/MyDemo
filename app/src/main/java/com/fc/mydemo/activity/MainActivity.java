@@ -28,7 +28,7 @@ public class MainActivity extends BaseActivity {
     private ArrayList<String> list = new ArrayList<>();
 
     private String[] item = {"ListView和通用Adapter", "WebView的使用", "Annotations框架的使用"
-            , "广播的使用","Handler和Thread的使用", "Service的使用"};
+            , "广播的使用", "Handler和Thread的使用", "Service的使用", "AsyncTask的使用"};
 
     /**
      * annotations框架可以不写onCreate方法
@@ -77,8 +77,16 @@ public class MainActivity extends BaseActivity {
                 intent = new Intent(this, MyBdcActivity_.class);
                 startActivity(intent);
                 break;
+            case 4:
+                intent = new Intent(this, HandlerTestActivity.class);
+                startActivity(intent);
+                break;
             case 5:
                 intent = new Intent(this, ServiceLifecycleActivity_.class);
+                startActivity(intent);
+                break;
+            case 6:
+                intent = new Intent(this, AsyncTaskTestActivity.class);
                 startActivity(intent);
                 break;
         }
