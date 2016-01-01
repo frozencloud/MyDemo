@@ -1,4 +1,4 @@
-package com.fc.mydemo.activity;
+package com.fc.mydemo.activity.annotations;
 
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -43,7 +43,7 @@ public class AnnotationsBackTestActivity extends AppCompatActivity {
     }
 
     /**
-     *
+     * 对UI的操作都需要在UiThread注解方法中进行，类似于AsyncTask.onPostExecute()方法
      */
     @UiThread
     protected void doSomethingInUIThread(int progress) {

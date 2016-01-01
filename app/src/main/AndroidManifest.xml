@@ -4,6 +4,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -41,7 +42,11 @@
         <activity android:name=".activity.ServiceLifecycleActivity_" />
         <activity android:name=".activity.HandlerTestActivity" />
         <activity android:name=".activity.AsyncTaskTestActivity" />
-        <activity android:name=".activity.AnnotationsBackTestActivity_"/>
+        <activity android:name=".activity.annotations.AnnotationsBackTestActivity_" />
+        <activity android:name=".activity.IntentTestActivity_" />
+        <activity android:name=".activity.FourModuleListActivity_" />
+        <activity android:name=".activity.AsyncListActivity_" />
+        <activity android:name=".activity.annotations.AnnotationsListActivity_"/>
     </application>
 
 </manifest>

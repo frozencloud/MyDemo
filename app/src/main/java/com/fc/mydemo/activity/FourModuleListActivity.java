@@ -1,46 +1,32 @@
 package com.fc.mydemo.activity;
 
 import android.content.Intent;
-import android.os.Bundle;
 import android.widget.ListView;
 
 import com.fc.mydemo.R;
-import com.fc.mydemo.activity.annotations.AnnotationsListActivity_;
 import com.fc.mydemo.utils.CommonAdapter;
-import com.fc.mydemo.utils.ToastUtil;
 import com.fc.mydemo.utils.ViewHolder;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ItemClick;
-import org.androidannotations.annotations.ItemLongClick;
 import org.androidannotations.annotations.ViewById;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 
-@EActivity(R.layout.activity_main)
-public class MainActivity extends BaseActivity {
-
+/**
+ * 四大组件相关内容的列表页面
+ */
+@EActivity(R.layout.activity_four_modules)
+public class FourModuleListActivity extends BaseActivity {
     @ViewById(R.id.list_view)
     ListView listView;
 
     private CommonAdapter<String> adapter;
     private ArrayList<String> list = new ArrayList<>();
 
-    private String[] item = {"ListView和通用Adapter", "WebView的使用", "四大组件相关"
-            , "异步操作相关", "Annotations框架相关"};
-
-    /**
-     * annotations框架可以不写onCreate方法
-     *
-     * @param savedInstanceState
-     */
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
+    private String[] item = {"广播的使用", "Handler和Thread的使用", "Service的使用", "Intent的使用"};
 
     @AfterViews
     protected void init() {
@@ -66,30 +52,20 @@ public class MainActivity extends BaseActivity {
     protected void mItemClick(int position) {
         switch (position) {
             case 0:
-                ToastUtil.showToastShort(this, "请查看MainActivity.java");
+                Intent intent = new Intent(this, MyBdcActivity_.class);
+                startActivity(intent);
                 break;
             case 1:
-                Intent intent = new Intent(this, WebViewTestActivity_.class);
+                intent = new Intent(this, HandlerTestActivity.class);
                 startActivity(intent);
                 break;
             case 2:
-                intent = new Intent(this, FourModuleListActivity_.class);
+                intent = new Intent(this, ServiceLifecycleActivity_.class);
                 startActivity(intent);
                 break;
             case 3:
-                intent = new Intent(this, AsyncListActivity_.class);
+                intent = new Intent(this, IntentTestActivity_.class);
                 startActivity(intent);
-                break;
-            case 4:
-                intent = new Intent(this, AnnotationsListActivity_.class);
-                startActivity(intent);
-                break;
         }
     }
-
-    @ItemLongClick(R.id.list_view)
-    protected void mItemLClick(int position) {
-        ToastUtil.showToastShort(this, "item position : " + item[position]);
-    }
-
 }
