@@ -24,7 +24,10 @@ public class IntentServiceTestActivity extends BaseActivity {
     protected void click(View view) {
         switch (view.getId()) {
             case R.id.start_intent_service_btn:
+                //同时启动多个Service不会阻断UI进程
                 Intent intent = new Intent(this, MyIntentService.class);
+                startService(intent);
+                startService(intent);
                 startService(intent);
                 break;
         }
