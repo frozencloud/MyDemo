@@ -26,7 +26,8 @@ public class FourModuleListActivity extends BaseActivity {
     private CommonAdapter<String> adapter;
     private ArrayList<String> list = new ArrayList<>();
 
-    private String[] item = {"广播的使用", "Handler和Thread的使用", "Service的使用", "Intent的使用"};
+    private String[] item = {"广播的使用", "Handler和Thread的使用", "Service的使用", "Intent的使用"
+            , "IntentService的使用"};
 
     @AfterViews
     protected void init() {
@@ -66,6 +67,11 @@ public class FourModuleListActivity extends BaseActivity {
             case 3:
                 intent = new Intent(this, IntentTestActivity_.class);
                 startActivity(intent);
+                break;
+            case 4:
+                intent = new Intent(this, IntentServiceTestActivity_.class);
+                startActivity(intent);
+                break;
         }
     }
 }
