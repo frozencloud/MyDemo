@@ -53,7 +53,8 @@
         <activity android:name=".activity.FourModuleListActivity_" />
         <activity android:name=".activity.AsyncListActivity_" />
         <activity android:name=".activity.annotations.AnnotationsListActivity_" />
-        <activity android:name=".activity.IntentServiceTestActivity_"/>
+        <activity android:name=".activity.IntentServiceTestActivity_" />
+        <activity android:name=".activity.annotations.RestActivity_"/>
     </application>
 
 </manifest>

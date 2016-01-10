@@ -27,7 +27,7 @@ public class AnnotationsListActivity extends BaseActivity {
     private CommonAdapter<String> adapter;
     private ArrayList<String> list = new ArrayList<>();
 
-    private String[] item = {"Background和UIThread注解"};
+    private String[] item = {"Background和UIThread注解","REST API的@GET、@POST注解的使用"};
 
     @AfterViews
     protected void init() {
@@ -54,6 +54,10 @@ public class AnnotationsListActivity extends BaseActivity {
         switch (position) {
             case 0:
                 Intent intent = new Intent(this, AnnotationsBackTestActivity_.class);
+                startActivity(intent);
+                break;
+            case 1:
+                intent = new Intent(this, RestActivity_.class);
                 startActivity(intent);
                 break;
         }
