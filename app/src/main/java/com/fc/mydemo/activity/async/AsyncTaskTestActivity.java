@@ -1,4 +1,4 @@
-package com.fc.mydemo.activity;
+package com.fc.mydemo.activity.async;
 
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -8,6 +8,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.fc.mydemo.R;
+import com.fc.mydemo.activity.BaseActivity;
 
 /**
  * 在Android中除了使用Thread进行异步操作外，还可以使用官方封装的AsyncTask进行异步操作。

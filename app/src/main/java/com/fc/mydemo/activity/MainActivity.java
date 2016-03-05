@@ -6,6 +6,10 @@ import android.widget.ListView;
 
 import com.fc.mydemo.R;
 import com.fc.mydemo.activity.annotations.AnnotationsListActivity_;
+import com.fc.mydemo.activity.async.AsyncListActivity_;
+import com.fc.mydemo.activity.fourmodule.FourModuleListActivity_;
+import com.fc.mydemo.activity.javabase.JavaBaseActivity_;
+import com.fc.mydemo.activity.xml.XMLParserActivity_;
 import com.fc.mydemo.utils.CommonAdapter;
 import com.fc.mydemo.utils.ToastUtil;
 import com.fc.mydemo.utils.ViewHolder;
@@ -29,7 +33,7 @@ public class MainActivity extends BaseActivity {
     private ArrayList<String> list = new ArrayList<>();
 
     private String[] item = {"ListView和通用Adapter", "WebView的使用", "四大组件相关"
-            , "异步操作相关", "Annotations框架相关"};
+            , "异步操作相关", "Annotations框架相关","xml解析","Java常见基础问题"};
 
     /**
      * annotations框架可以不写onCreate方法
@@ -82,6 +86,14 @@ public class MainActivity extends BaseActivity {
                 break;
             case 4:
                 intent = new Intent(this, AnnotationsListActivity_.class);
+                startActivity(intent);
+                break;
+            case 5:
+                intent = new Intent(this, XMLParserActivity_.class);
+                startActivity(intent);
+                break;
+            case 6:
+                intent = new Intent(this, JavaBaseActivity_.class);
                 startActivity(intent);
                 break;
         }

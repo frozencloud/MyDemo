@@ -44,17 +44,24 @@
         </service>
         <service android:name=".service.MyIntentService" />
 
-        <activity android:name=".activity.MyBdcActivity_" />
-        <activity android:name=".activity.ServiceLifecycleActivity_" />
-        <activity android:name=".activity.HandlerTestActivity" />
-        <activity android:name=".activity.AsyncTaskTestActivity" />
+        <activity android:name=".activity.fourmodule.MyBdcActivity_" />
+        <activity android:name=".activity.fourmodule.ServiceLifecycleActivity_" />
+        <activity android:name=".activity.fourmodule.IntentTestActivity_" />
+        <activity android:name=".activity.fourmodule.FourModuleListActivity_" />
+        <activity android:name=".activity.fourmodule.IntentServiceTestActivity_" />
+        <activity android:name=".activity.async.HandlerTestActivity" />
+        <activity android:name=".activity.async.AsyncListActivity_" />
+        <activity android:name=".activity.async.AsyncTaskTestActivity" />
         <activity android:name=".activity.annotations.AnnotationsBackTestActivity_" />
-        <activity android:name=".activity.IntentTestActivity_" />
-        <activity android:name=".activity.FourModuleListActivity_" />
-        <activity android:name=".activity.AsyncListActivity_" />
         <activity android:name=".activity.annotations.AnnotationsListActivity_" />
-        <activity android:name=".activity.IntentServiceTestActivity_" />
-        <activity android:name=".activity.annotations.RestActivity_"/>
+        <activity android:name=".activity.annotations.RestActivity_" />
+        <activity android:name=".activity.xml.XMLParserActivity_" />
+        <activity android:name=".activity.xml.DomParserDemo" />
+        <activity android:name=".activity.xml.PullParserDemo" />
+        <activity android:name=".activity.xml.SAXParserDemo" />
+        <activity android:name=".activity.javabase.JavaBaseActivity_" />
+        <activity android:name=".activity.javabase.StringCompareActivity_" />
+        <activity android:name=".activity.javabase.ListCompareActivity_"></activity>
     </application>
 
 </manifest>

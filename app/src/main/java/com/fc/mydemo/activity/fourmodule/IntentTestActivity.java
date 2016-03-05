@@ -1,4 +1,4 @@
-package com.fc.mydemo.activity;
+package com.fc.mydemo.activity.fourmodule;
 
 import android.app.Activity;
 import android.content.Context;
@@ -13,6 +13,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 
 import com.fc.mydemo.R;
+import com.fc.mydemo.activity.BaseActivity;
 import com.fc.mydemo.utils.ToastUtil;
 
 import org.androidannotations.annotations.Click;

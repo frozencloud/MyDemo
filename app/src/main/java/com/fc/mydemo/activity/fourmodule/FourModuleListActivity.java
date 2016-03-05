@@ -1,9 +1,11 @@
-package com.fc.mydemo.activity;
+package com.fc.mydemo.activity.fourmodule;
 
 import android.content.Intent;
 import android.widget.ListView;
 
 import com.fc.mydemo.R;
+import com.fc.mydemo.activity.BaseActivity;
+import com.fc.mydemo.activity.async.HandlerTestActivity;
 import com.fc.mydemo.utils.CommonAdapter;
 import com.fc.mydemo.utils.ViewHolder;
 

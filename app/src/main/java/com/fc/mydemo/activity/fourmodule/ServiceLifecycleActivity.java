@@ -1,4 +1,4 @@
-package com.fc.mydemo.activity;
+package com.fc.mydemo.activity.fourmodule;
 
 import android.content.ComponentName;
 import android.content.Context;

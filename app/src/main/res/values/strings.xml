@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">MyDemo</string>
+
+    <string name="string_compare">String 字符串常量\n
+        StringBuffer 字符串变量（线程安全）\n
+        StringBuilder 字符串变量（非线程安全）\n
+        在大部分情况下性能比较StringBuilder > StringBuffer > String</string>
+
+    <string name="list_compare">ArrayList 和Vector是采用数组方式存储数据，
+        此数组元素数大于实际存储的数据以便增加和插入元素，
+        都允许直接序号索引元素，但是插入数据要设计到数组元素移动等内存操作，
+        所以索引数据快插入数据慢。\n
+        LinkedList可被用作堆栈（stack），队列（queue）或双向队列（deque）。
+        多个线程同时访问一个List，则必须自己实现访问同步，即线程不安全。\n
+        Vector非常类似ArrayList，但是Vector是同步的。\n</string>
 </resources>

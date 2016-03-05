@@ -1,4 +1,4 @@
-package com.fc.mydemo.activity;
+package com.fc.mydemo.activity.fourmodule;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;
@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.fc.mydemo.R;
+import com.fc.mydemo.activity.BaseActivity;
 import com.fc.mydemo.utils.ToastUtil;
 
 import org.androidannotations.annotations.Click;
