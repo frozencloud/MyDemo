@@ -12,7 +12,10 @@ import com.fc.mydemo.utils.ToastUtil;
 
 /**
  * 用于演示线程和Handler的使用，故此该Activity不使用注解编写
- * 知识要点：Thread中不能执行UI操作，如果需要则在Handler中进行。
+ * 1)Looper:一个线程可以产生一个Looper对象，由它来管理此线程里的MessageQueue(消息队列)。
+ * 2)Handler:构造Handler对象来与Looper沟通，以便push新消息到MessageQueue里;或者接收Looper从Message Queue取出)所送来的消息。
+ * 3)Message Queue(消息队列):用来存放线程放入的消息。
+ * 4)线程：UIThread 通常就是main thread，而Android启动程序时会替它建立一个MessageQueue。
  */
 public class HandlerTestActivity extends BaseActivity {
 

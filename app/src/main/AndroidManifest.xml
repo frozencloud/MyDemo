@@ -12,6 +12,9 @@
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.FLASHLIGHT" />
 
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -61,7 +64,10 @@
         <activity android:name=".activity.xml.SAXParserDemo" />
         <activity android:name=".activity.javabase.JavaBaseActivity_" />
         <activity android:name=".activity.javabase.StringCompareActivity_" />
-        <activity android:name=".activity.javabase.ListCompareActivity_"></activity>
+        <activity android:name=".activity.javabase.ListCompareActivity_" />
+        <activity android:name=".activity.camera.CameraMainActivity_" />
+        <activity android:name=".activity.camera.CameraTestActivity_"
+            android:screenOrientation="portrait"/>
     </application>
 
 </manifest>

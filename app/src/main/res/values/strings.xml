@@ -13,4 +13,7 @@
         LinkedList可被用作堆栈（stack），队列（queue）或双向队列（deque）。
         多个线程同时访问一个List，则必须自己实现访问同步，即线程不安全。\n
         Vector非常类似ArrayList，但是Vector是同步的。\n</string>
+
+    <string name="camera_auto_focus">自动对焦</string>
+    <string name="camera_take_picture">拍照</string>
 </resources>
