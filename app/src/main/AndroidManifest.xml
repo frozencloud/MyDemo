@@ -22,11 +22,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".activity.MainActivity_">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+             <intent-filter>
+             <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+
+             <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
         </activity>
         <activity android:name=".activity.BaseActivity" />
         <activity android:name=".activity.WebViewTestActivity_" />
@@ -62,12 +63,21 @@
         <activity android:name=".activity.xml.DomParserDemo" />
         <activity android:name=".activity.xml.PullParserDemo" />
         <activity android:name=".activity.xml.SAXParserDemo" />
-        <activity android:name=".activity.javabase.JavaBaseActivity_" />
-        <activity android:name=".activity.javabase.StringCompareActivity_" />
-        <activity android:name=".activity.javabase.ListCompareActivity_" />
         <activity android:name=".activity.camera.CameraMainActivity_" />
-        <activity android:name=".activity.camera.CameraTestActivity_"
-            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".activity.camera.CameraTestActivity_"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.widget.actionbar.ActionBarBaseActivity"
+            android:theme="@style/ActionBarStyle">
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        </activity>
+        <activity android:name=".activity.widget.actionbar.IconActionBarActivity"
+            android:theme="@style/IconActionBarStyle"/>
     </application>
 
 </manifest>
